@@ -1,8 +1,8 @@
 const server = require('./server.js')
 
-function MockApiWebpackPlugin({ mockMap, port = 3000 }) {
+function MockApiWebpackPlugin({ config, port = 3000 }) {
 	
-	this.mockMap = mockMap
+	this.mockMap = config
 	this.port = port
 }
 

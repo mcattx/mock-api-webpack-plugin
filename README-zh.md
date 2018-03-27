@@ -44,7 +44,7 @@ const mockConfig = require('./mock.config.js')
 module.exports = {
 	plugins: [
 		new MockWebpackPlugin({
-	    	mockMap: mockConfig,
+	    	config: mockConfig,
 	     	port: 3000
 	    })
 	],
@@ -63,7 +63,7 @@ module.exports = {
 new MockWebpackPlugin(options)
 ```
 
-- `options.mockMap`: mock 数据的配置信息
+- `options.config`: mock 数据的配置信息
 - `options.port`: 代理服务器端口，默认是 3000
 
 ## Thanks
