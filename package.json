@@ -1,15 +1,25 @@
 {
   "name": "mock-api-webpack-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "A webpack plugin for mock data",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "express": "^4.16.3"
-  }
+  "dependencies": {
+    "express": "^4.16.3",
+    "mockjs": "^1.0.1-beta3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titancat/mock-api-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/titancat/mock-api-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/titancat/mock-api-webpack-plugin#readme"
 }
