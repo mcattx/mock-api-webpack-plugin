@@ -1,6 +1,8 @@
 # mock-api-webpack-plugin
 A webpack plugin for mock data
 
+[中文](./README-zh.md)
+
 ## Install
 
 ```
@@ -42,7 +44,7 @@ const mockConfig = require('./mock.config.js')
 module.exports = {
 	plugins: [
 		new MockWebpackPlugin({
-	    	mockMap: MockConfig,
+	    	mockMap: mockConfig,
 	     	port: 3000
 	    })
 	],
