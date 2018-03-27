@@ -15,8 +15,15 @@ module.exports = ({
 
 		app.use(mockHandler)
 
-		app.listen(PORT, () => {
+		const server = app.listen(PORT, () => {
 			console.log('Mock server running at http://localhost:' + PORT)
+		})
+
+		server.on('error', (err) => {
+			// check if port is occupied
+		    if (err.code === 'EADDRINUSE') {
+		    	console.log('The port【' + PORT + '】 is occupied, please change other port.')
+		    }
 		})
 	} else {
 		console.warn('Mock Data Config File Not Found.')
