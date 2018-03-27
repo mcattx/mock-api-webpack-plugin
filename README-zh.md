@@ -111,6 +111,10 @@ new MockWebpackPlugin(options)
 
 - `options.port`: 代理服务器端口，默认是 3000
 
+## 开源许可
+
+MIT
+
 ## 致谢
 
 本项目受 [mock-webpack-plugin](https://github.com/MarxJiao/mock-webpack-plugin) & [MockJS](https://github.com/nuysoft/Mock) 启发而来

@@ -59,7 +59,7 @@ module.exports = config
 }
 ```
 
-The second mode is to generate data in a specified rule randomly. You must add `"randomMock": true` to JSON file to take effect.For example: 
+The second mode is to generate data in a specified rule randomly. You must add `"randomMock": true` to JSON file to take effect. For example: 
 
 ```
 {
@@ -75,7 +75,7 @@ The second mode is to generate data in a specified rule randomly. You must add `
 }
 ```
 
-Learn rule refter to [mockjs wiki](https://github.com/nuysoft/Mock/wiki)
+Learn rules refter to [mockjs wiki](https://github.com/nuysoft/Mock/wiki)
 
 After above, include `mock.config.js` in your `webpack.config.js` and config MockWebpackPlugin.
 
@@ -109,6 +109,10 @@ new MockWebpackPlugin(options)
 - `options.config`: mock config file
 
 - `options.port`: port of mock server
+
+## License
+
+MIT
 
 ## Thanks
 
