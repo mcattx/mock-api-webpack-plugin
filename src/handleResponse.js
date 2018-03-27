@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const Mock = require('mockjs')
 
 const readFile = (filePath) => {
 	return new Promise((resolve, reject) => {
@@ -18,9 +19,18 @@ const readFile = (filePath) => {
 module.exports = async(req, res, next) => {
 	const mockMap = req.mockMap
 
+	let result = {}
+
 	if (mockMap[req.path]) {
 		const data = await readFile(mockMap[req.path].path)
-		res.send(JSON.parse(data))
+		const parseData = JSON.parse(data)
+		if (parseData.randomMock) {
+			delete parseData.randomMock
+			result = Mock.mock(parseData)
+		} else {
+			result = parseData
+		}
+		res.send(result)
 	} else {
 		res.send({
 			code: 200,

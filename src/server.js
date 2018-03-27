@@ -1,5 +1,5 @@
 const express = require('express')
-const mockHandler = require('./mock.js')
+const reqHandler = require('./handleResponse.js')
 const app = express()
 
 module.exports = ({
@@ -13,7 +13,7 @@ module.exports = ({
 			next()
 		})
 
-		app.use(mockHandler)
+		app.use(reqHandler)
 
 		const server = app.listen(PORT, () => {
 			console.log('Mock server running at http://localhost:' + PORT)
